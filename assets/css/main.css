@@ -1,0 +1,28 @@
+body {
+  color: rgb(1, 80, 133);
+}
+.navbar-brand {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "Times New Roman", Times, serif;
+}
+main,
+main section#hero {
+  min-height: 100vh;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.display-2 {
+  font-weight: 600;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 2px;
+  margin: 0;
+  margin-bottom: 20px;
+}
