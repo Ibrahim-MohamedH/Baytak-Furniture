@@ -7,18 +7,19 @@
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
-      href="../assets/vendors/bootstrap/bootstrap.min.css"
+      href="./assets/vendors/bootstrap/bootstrap.min.css"
     />
     <!-- Font-awesome -->
-    <link rel="stylesheet" href="../assets/vendors/fonts/all.min.css" />
+    <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
     <!-- main Css -->
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/products.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">Baytak Furniture</a>
+          <a class="navbar-brand" href="./index.html">Baytak Furniture</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -33,15 +34,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../products.html">Products</a>
+                <a class="nav-link" href="./products.html">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../cart.html"
+                <a class="nav-link" href="./cart.html"
                   >Your Cart <i class="fa-solid fa-cart-shopping"></i
                 ></a>
               </li>
@@ -51,7 +55,7 @@
                 <a
                   class="btn btn-success me-2 mb-lg-0 mb-2"
                   aria-current="page"
-                  href="./login.html"
+                  href="./access/login.html"
                   >Login</a
                 >
               </li>
@@ -59,7 +63,7 @@
                 <a
                   class="btn btn-secondary"
                   aria-current="page"
-                  href="./register.html"
+                  href="./access/register.html"
                   >Register</a
                 >
               </li>
@@ -67,40 +71,90 @@
           </div>
         </div>
       </nav>
+      <div
+        class="container mt-5 border-bottom border-3 border-success rounded-5"
+      >
+        <div class="row py-4 justify-content-center px-3">
+          <h4>Categories</h4>
+          <div class="col-md-2 col-sm-3">
+            <input
+              type="radio"
+              name="categories"
+              id="all"
+              class="form-check-input"
+            />
+            <label for="all" class="form-check-label ps-1">All</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <input
+              type="radio"
+              name="categories"
+              id="chairs"
+              class="form-check-input"
+            />
+            <label for="chairs" class="form-check-label ps-1">Chairs</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <input
+              type="radio"
+              name="categories"
+              id="tables"
+              class="form-check-input"
+            />
+            <label for="tables" class="form-check-label ps-1">Tables</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <input
+              type="radio"
+              name="categories"
+              id="couches"
+              class="form-check-input"
+            />
+            <label for="couches" class="form-check-label ps-1">Couches</label>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <input
+              type="radio"
+              name="categories"
+              id="beds"
+              class="form-check-input"
+            />
+            <label for="beds" class="form-check-label ps-1">Beds</label>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main>
-      <section>
+      <section class="py-5">
         <div class="container">
-          <div class="row justify-content-center pt-5 mt-5">
-            <div
-              class="col-lg-4 col-md-6 col-sm-8 border border-dark border-3 rounded p-4"
-            >
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
+          <div class="row" id="product">
+            <!-- ============================== -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+              <div class="card">
+                <img
+                  src="https://www.ikea.com/eg/en/images/products/lack-side-table-white-stained-oak-effect__0411514_pe570468_s5.jpg?f=s"
+                  class="card-img-top"
+                  alt="product_picture"
                 />
+                <div class="card-body">
+                  <h5 class="card-title">Product Name</h5>
+                  <p class="card-text">Description</p>
+                  <p class="card-text text-end">price</p>
+                  <div class="text-center">
+                    <button class="btn btn-primary">
+                      <i class="fa-solid fa-cart-plus"></i> Add
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <button class="btn btn-primary">Login</button>
             </div>
+            <!-- ============================== -->
           </div>
         </div>
       </section>
     </main>
+
     <footer class="bg-dark py-3 text-light">
       <div class="container-fluid">
         <div class="row">
@@ -144,6 +198,6 @@
       </div>
     </footer>
     <!-- bootstrap -->
-    <script src="../assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
   </body>
 </html>
