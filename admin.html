@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baytak</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/bootstrap/bootstrap.min.css"
+    />
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
+    <!-- main Css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Baytak Furniture</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products.html">Products</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="py-5 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 py-5">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#addProduct"
+              >
+                Add New Product
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="addProduct"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Add New Product
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="productName" class="form-label"
+                          >Product Name</label
+                        >
+                        <input
+                          type="text"
+                          id="productName"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="description" class="form-label"
+                          >Description</label
+                        >
+                        <textarea
+                          id="description"
+                          class="form-control"
+                          cols="30"
+                          rows="10"
+                        ></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="price" class="form-label">price</label>
+                        <input type="text" id="price" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label for="imgURL" class="form-label"
+                          >Prodcut Image</label
+                        >
+                        <input type="text" id="imgURL" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label for="category" class="form-label"
+                          >Category</label
+                        >
+                        <select class="form-select" id="category">
+                          <option value="chairs">Chairs</option>
+                          <option value="tables">Tables</option>
+                          <option value="beds">Beds</option>
+                          <option value="couches">Couches</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-start">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Add Product
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5">
+              <button class="btn btn-info showAll">Show Products</button>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#addAdmin"
+              >
+                Add new Admin
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="addAdmin"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Add new Admin
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="username" class="form-label"
+                          >User Name</label
+                        >
+                        <input type="text" class="form-control" id="username" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-start">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Add New Admin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5">
+              <button class="btn btn-info showUsers">Show Users</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <table class="table table-dark table-hover text-center">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>category</th>
+                <th colspan="2">Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <table class="table table-dark table-hover text-center">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark py-3 text-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <h6>Our Location</h6>
+            <ul>
+              <li>Street 1 - city - coutry</li>
+              <li>Street 2 - city - coutry</li>
+              <li>Street 3 - city - coutry</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-3">
+            <h6>Contact us</h6>
+            <ul>
+              <li>Mobil</li>
+              <li>Mobil</li>
+              <li>Email</li>
+              <li>Email</li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-3">
+            <h6>Categories</h6>
+            <ul>
+              <li>Category 1</li>
+              <li>Category 2</li>
+              <li>Category 3</li>
+              <li>Category 4</li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.1552904833761!2d31.214375303659832!3d30.037725769542178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458470a8b4bd441%3A0x4d286badfe52849f!2sINSTANT%20SOFTWARE%20SOLUTION!5e0!3m2!1sen!2seg!4v1700340788898!5m2!1sen!2seg"
+              width="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- bootstrap -->
+    <script src="./assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
