@@ -1,0 +1,7 @@
+table {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}

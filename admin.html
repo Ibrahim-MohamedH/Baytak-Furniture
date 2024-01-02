@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
     <!-- main Css -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/admin.css" />
   </head>
   <body>
     <header>
@@ -134,7 +135,11 @@
                       >
                         Close
                       </button>
-                      <button type="button" class="btn btn-primary">
+                      <button
+                        onclick="renderProduct()"
+                        type="button"
+                        class="btn btn-primary"
+                      >
                         Add Product
                       </button>
                     </div>
@@ -143,7 +148,9 @@
               </div>
             </div>
             <div class="col-md-3 col-sm-6 py-5">
-              <button class="btn btn-info showAll">Show Products</button>
+              <button onclick="showAllProducts()" class="btn btn-info showAll">
+                Show Products
+              </button>
             </div>
             <div class="col-md-3 col-sm-6 py-5">
               <!-- Button trigger modal -->
@@ -214,7 +221,11 @@
                       >
                         Close
                       </button>
-                      <button type="button" class="btn btn-success">
+                      <button
+                        onclick="addNewAdmin()"
+                        type="button"
+                        class="btn btn-success"
+                      >
                         Add New Admin
                       </button>
                     </div>
@@ -223,7 +234,9 @@
               </div>
             </div>
             <div class="col-md-3 col-sm-6 py-5">
-              <button class="btn btn-info showUsers">Show Users</button>
+              <button onclick="showAllUsers()" class="btn btn-info showUsers">
+                Show Users
+              </button>
             </div>
           </div>
         </div>
@@ -252,10 +265,100 @@
                 <th>Email</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>
+      <!-- Update Modal -->
+      <div
+        class="modal fade"
+        id="updateProduct"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Update Product
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="updateProductName" class="form-label"
+                  >Product Name</label
+                >
+                <input
+                  type="text"
+                  id="updateProductName"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="updateDescription" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  id="updateDescription"
+                  class="form-control"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="updatePrice" class="form-label">price</label>
+                <input type="text" id="updatePrice" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="updateimgURL" class="form-label"
+                  >Prodcut Image</label
+                >
+                <input type="text" id="updateimgURL" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="updateCategory" class="form-label">Category</label>
+                <select class="form-select" id="updateCategory">
+                  <option value="chairs">Chairs</option>
+                  <option value="tables">Tables</option>
+                  <option value="beds">Beds</option>
+                  <option value="couches">Couches</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="modal-footer justify-content-start">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                onclick="updateProduct()"
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn btn-warning"
+              >
+                Update Product
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark py-3 text-light">
       <div class="container-fluid">
@@ -301,5 +404,7 @@
     </footer>
     <!-- bootstrap -->
     <script src="./assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- admin inject script -->
+    <script src="./assets/js/admin.js"></script>
   </body>
 </html>
